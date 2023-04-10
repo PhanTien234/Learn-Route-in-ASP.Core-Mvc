@@ -1,3 +1,4 @@
+using System.Collections.Immutable;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.Controllers
@@ -47,7 +48,15 @@ namespace App.Controllers
 
                 XUANTHULAB.NET
             ";
-            return Content(content, "text/plain");
+            return Content(content, "text/html");
+        }
+
+        public IActionResult Flower(){
+            //Startup.ContentRootPath
+            string filePath = Path.Combine("Files", "picture1.jpg");
+            var bytes = System.IO.File.ReadAllBytes(filePath);
+
+            return File(bytes, "image/jpg");
         }
 
     //     Kiểu trả về                 | Phương thức
