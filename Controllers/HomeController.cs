@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using AppMvc.Net.Models;
+using App.Net.Models;
 
-namespace AppMvc.Net.Controllers;
+namespace App.Net.Controllers;
 
 public class HomeController : Controller
 {
@@ -12,6 +12,8 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
+
+    public string HiHome() => "Xin chao cac ban toi la Tien day!";
 
     public IActionResult Index()
     {

@@ -20,6 +20,10 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+//URL: /{controller}/{action}/{id?}
+//Abc/Xyz => Controller =Abc, goi method Xyz
+//Home/Index
+//First/Index
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
