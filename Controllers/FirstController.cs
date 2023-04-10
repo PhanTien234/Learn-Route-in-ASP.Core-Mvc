@@ -51,12 +51,22 @@ namespace App.Controllers
             return Content(content, "text/html");
         }
 
-        public IActionResult Flower(){
-            //Startup.ContentRootPath
-            string filePath = Path.Combine("Files", "picture1.jpg");
-            var bytes = System.IO.File.ReadAllBytes(filePath);
+        // public IActionResult Flower(){
+        //     //Startup.ContentRootPath
+        //     string filePath = Path.Combine("Files", "picture1.jpg");
+        //     var bytes = System.IO.File.ReadAllBytes(filePath);
 
-            return File(bytes, "image/jpg");
+        //     return File(bytes, "image/jpg");
+        // }
+
+        public IActionResult IPhonePrice()
+        {
+            return Json(
+                new{
+                    productName = "Iphone X",
+                    Price = 1000
+                }
+            );
         }
 
     //     Kiểu trả về                 | Phương thức
