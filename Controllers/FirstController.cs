@@ -69,6 +69,12 @@ namespace App.Controllers
             );
         }
 
+        public IActionResult Privacy(){
+            var url = Url.Action("Privacy", "Home");
+            _logger.LogInformation("Chuyen huong den " + url);
+            return LocalRedirect(url); // Local ~ host
+        }
+
     //     Kiểu trả về                 | Phương thức
     //  IActionResult
     // ------------------------------------------------
