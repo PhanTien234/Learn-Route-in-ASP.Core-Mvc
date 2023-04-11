@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /home/tien/Desktop/AppMvc.Net
 build_property._RazorSourceGeneratorDebug = 
 
+[/home/tien/Desktop/AppMvc.Net/MyView/First/xinchao3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = TXlWaWV3L0ZpcnN0L3hpbmNoYW8zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/tien/Desktop/AppMvc.Net/MyView/xinchao1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = TXlWaWV3L3hpbmNoYW8xLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

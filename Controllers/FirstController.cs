@@ -116,7 +116,14 @@ namespace App.Controllers
 
             //HelloView.cshtml -> /View/First
             // /View/Controller/Action.cshtml
-            return View((object) username);
+            // return View((object) username);
+
+            return View("xinchao3", username);
+            //View();
+            //View(Model);
+
         }
+
+        
     }
 }
