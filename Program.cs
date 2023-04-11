@@ -1,3 +1,4 @@
+using App.Services;
 using Microsoft.AspNetCore.Mvc.Razor;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -14,6 +15,13 @@ builder.Services.Configure<RazorViewEngineOptions>(options => {
     // {2} -> name Area
     options.ViewLocationFormats.Add("/MyView/{1}/{0}" + RazorViewEngine.ViewExtension);
 });
+
+// builder.Services.AddSingleton<ProductService>();
+// builder.Services.AddSingleton<ProductService, ProductService>();
+// builder.Services.AddSingleton(typeof(ProductService));
+
+builder.Services.AddSingleton(typeof(ProductService), typeof(ProductService));
+
 // builder.Services.AddTransient(typeof(ILogger<>), typeof(Logger<>)); Serilog
 var app = builder.Build();
 

@@ -1,4 +1,6 @@
 using System.Collections.Immutable;
+using App.Models;
+using App.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace App.Controllers
@@ -6,8 +8,10 @@ namespace App.Controllers
     public class FirstController : Controller
     {
         private readonly ILogger<FirstController> _logger;
-        public FirstController(ILogger<FirstController> logger){
+        private readonly ProductService _productService;
+        public FirstController(ILogger<FirstController> logger, ProductService productService){
             _logger = logger;
+            _productService = productService;
         }
         public string Index()
         {
@@ -124,6 +128,20 @@ namespace App.Controllers
 
         }
 
-        
+        public IActionResult ViewProduct(int? id){
+            var product = _productService.Where(p => p.Id == id).FirstOrDefault();
+            if(product == null)
+                return NotFound();
+
+
+              //View/First/ViewProduct.cshtml
+              //MyView/First/ViewProduct.cshtml
+            return View(product);
+            
+            //Trường hopej thứ hai để truyền dữ liệu từ Controller qua View ta sử dụng:
+            //ViewData
+        }
+
+
     }
 }

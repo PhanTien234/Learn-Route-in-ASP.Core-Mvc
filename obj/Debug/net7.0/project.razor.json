@@ -18685,6 +18685,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/tien/Desktop/AppMvc.Net/Views/First/ViewProduct.cshtml",
+      "TargetPath": "Views\\First\\ViewProduct.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/tien/Desktop/AppMvc.Net/Views/First/xinchao2.cshtml",
       "TargetPath": "Views\\First\\xinchao2.cshtml",
       "FileKind": "mvc"
