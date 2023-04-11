@@ -136,10 +136,14 @@ namespace App.Controllers
 
               //View/First/ViewProduct.cshtml
               //MyView/First/ViewProduct.cshtml
-            return View(product);
+            // return View(product);
             
             //Trường hopej thứ hai để truyền dữ liệu từ Controller qua View ta sử dụng:
             //ViewData
+            // this.ViewData["key"] = "value";
+            this.ViewData["product"] = product;
+            ViewData["Title"] = product.Name;
+            return View("ViewProduct2");
         }
 
 

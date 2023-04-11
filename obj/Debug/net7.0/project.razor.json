@@ -18660,6 +18660,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/tien/Desktop/AppMvc.Net/Views/First/ViewProduct2.cshtml",
+      "TargetPath": "Views\\First\\ViewProduct2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/tien/Desktop/AppMvc.Net/Views/First/HelloView.cshtml",
       "TargetPath": "Views\\First\\HelloView.cshtml",
       "FileKind": "mvc"
