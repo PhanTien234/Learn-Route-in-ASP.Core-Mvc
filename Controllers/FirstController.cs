@@ -96,6 +96,13 @@ namespace App.Controllers
     // PartialViewResult           | PartialView()
     // ViewComponentResult         | ViewComponent()
     // StatusCodeResult            | StatusCode()
+
+
     // ViewResult                  | View()
+
+        public IActionResult HelloView(){
+            //View  => Razor engine, doc .cshtml (template)
+            return View("/MyView/xinchao1.cshtml");
+        }
     }
 }
