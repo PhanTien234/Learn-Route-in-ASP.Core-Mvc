@@ -100,9 +100,23 @@ namespace App.Controllers
 
     // ViewResult                  | View()
 
-        public IActionResult HelloView(){
+        public IActionResult HelloView(string username){
+            if(string.IsNullOrEmpty(username))
+                username = "Khach";
+            
+            
             //View  => Razor engine, doc .cshtml (template)
-            return View("/MyView/xinchao1.cshtml");
+            //_______________________________________________
+            // View(template) - template đường dẫn tuyệt đối tới cs.html
+            //View(template, model
+
+            //xinchao2.cshtml -> /View/First
+            // return View("xinchao2", username);
+            // return View("/MyView/xinchao1.cshtml", username);
+
+            //HelloView.cshtml -> /View/First
+            // /View/Controller/Action.cshtml
+            return View((object) username);
         }
     }
 }
