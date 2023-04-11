@@ -74,6 +74,11 @@ namespace App.Controllers
             _logger.LogInformation("Chuyen huong den " + url);
             return LocalRedirect(url); // Local ~ host
         }
+        public IActionResult Google(){
+            var url = "https://google.com";
+            _logger.LogInformation("Chuyen huong den " + url);
+            return Redirect(url); // Local ~ host
+        }
 
     //     Kiểu trả về                 | Phương thức
     //  IActionResult
