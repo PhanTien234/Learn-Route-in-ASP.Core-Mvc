@@ -128,12 +128,18 @@ namespace App.Controllers
 
         }
 
+
+        [TempData]
+        public string StatusMessage {get; set;}
+
         public IActionResult ViewProduct(int? id){
             var product = _productService.Where(p => p.Id == id).FirstOrDefault();
             if(product == null){
-                TempData["StatusMessage"] = "San pham ban khong co";
+                // TempData["StatusMessage"] = "San pham ban khong co";
+                StatusMessage = "San pham ban yeu cau khong co";
                 return Redirect(Url.Action("Index", "Home"));
             }
+
 
 
 
