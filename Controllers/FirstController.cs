@@ -130,8 +130,11 @@ namespace App.Controllers
 
         public IActionResult ViewProduct(int? id){
             var product = _productService.Where(p => p.Id == id).FirstOrDefault();
-            if(product == null)
-                return NotFound();
+            if(product == null){
+                TempData["StatusMessage"] = "San pham ban khong co";
+                return Redirect(Url.Action("Index", "Home"));
+            }
+
 
 
               //View/First/ViewProduct.cshtml
@@ -145,7 +148,7 @@ namespace App.Controllers
             // ViewData["Title"] = product.Name;
             // return View("ViewProduct2");
 
-            ViewBag.product = product;
+            TempData["Thongbao"] = "";            ViewBag.product = product;
             return View("ViewProduct3");
         }
 

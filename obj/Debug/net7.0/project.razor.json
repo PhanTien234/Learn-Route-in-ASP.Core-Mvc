@@ -18705,6 +18705,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/tien/Desktop/AppMvc.Net/Views/Shared/_AlertMessage.cshtml",
+      "TargetPath": "Views\\Shared\\_AlertMessage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/tien/Desktop/AppMvc.Net/Views/First/ViewProduct.cshtml",
       "TargetPath": "Views\\First\\ViewProduct.cshtml",
       "FileKind": "mvc"
