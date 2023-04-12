@@ -57,17 +57,21 @@ namespace App.Controllers
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
             return View("Detail", planet);
         }
-                public IActionResult Uranus()
-        {
-            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
-            return View("Detail", planet);
-        }
-                public IActionResult Neptune()
+        public IActionResult Uranus()
         {
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
             return View("Detail", planet);
         }
 
+        [Route("sao")]
+        public IActionResult Neptune()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+
+        //controller, action, area => [controller] [action] [area]
+        [Route("hanhtinh/{id:int}")] // hanhtinh/id
         public IActionResult PlanetInfo(int id )
         {
             var planet =_planetService.Where(x => x.Id == id).FirstOrDefault();
