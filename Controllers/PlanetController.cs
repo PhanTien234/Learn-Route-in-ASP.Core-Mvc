@@ -63,7 +63,7 @@ namespace App.Controllers
             return View("Detail", planet);
         }
 
-        [Route("sao")]
+        [Route("sao/[action]")] // sao/Neptune
         public IActionResult Neptune()
         {
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
