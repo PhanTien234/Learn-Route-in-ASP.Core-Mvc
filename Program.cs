@@ -36,6 +36,8 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
+app.UseStatusCodePages(); // EndpointRoutingMiddle ware
+
 app.UseRouting();
 
 app.UseAuthorization();
