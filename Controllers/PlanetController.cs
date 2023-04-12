@@ -31,5 +31,47 @@ namespace App.Controllers
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
             return View("Detail", planet);
         }
+
+        public IActionResult Mercury()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+
+                public IActionResult Venus()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+                public IActionResult Earth()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+                public IActionResult Mars()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+                public IActionResult Jupiter()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+                public IActionResult Saturn()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+                public IActionResult Uranus()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+                public IActionResult Neptune()
+        {
+            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
     }
 }
