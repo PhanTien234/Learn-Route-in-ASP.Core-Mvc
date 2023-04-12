@@ -31,14 +31,7 @@ namespace App.Controllers
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
             return View("Detail", planet);
         }
-
-        public IActionResult Mercury()
-        {
-            var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
-            return View("Detail", planet);
-        }
-
-                public IActionResult Venus()
+        public IActionResult Venus()
         {
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
             return View("Detail", planet);
@@ -71,6 +64,12 @@ namespace App.Controllers
                 public IActionResult Neptune()
         {
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
+            return View("Detail", planet);
+        }
+
+        public IActionResult PlanetInfo(int id )
+        {
+            var planet =_planetService.Where(x => x.Id == id).FirstOrDefault();
             return View("Detail", planet);
         }
     }

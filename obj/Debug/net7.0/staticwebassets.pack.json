@@ -245,6 +245,10 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Earth.jpg",
+      "PackagePath": "staticwebassets/planet/Earth.jpg"
+    },
+    {
       "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Jupiter.jpg",
       "PackagePath": "staticwebassets/planet/Jupiter.jpg"
     },
@@ -263,10 +267,6 @@
     {
       "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Saturn.jpg",
       "PackagePath": "staticwebassets/planet/Saturn.jpg"
-    },
-    {
-      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/The_Blue_Marble.jpg",
-      "PackagePath": "staticwebassets/planet/The_Blue_Marble.jpg"
     },
     {
       "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Uranus.jpg",

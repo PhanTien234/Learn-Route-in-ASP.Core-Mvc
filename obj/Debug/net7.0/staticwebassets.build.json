@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wM1429L5TaeX0PYSBzXssC51w3zK/OmSeXfeVqlDC1c=",
+  "Hash": "a8qAhGn3rCFf+V0gth/yahbHyfR3XY5DPtd5nO4AXQU=",
   "Source": "AppMvc.Net",
   "BasePath": "_content/AppMvc.Net",
   "Mode": "Default",
@@ -1071,6 +1071,23 @@
       "OriginalItemSpec": "wwwroot/lib/jquery/LICENSE.txt"
     },
     {
+      "Identity": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Earth.jpg",
+      "SourceId": "AppMvc.Net",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/tien/Desktop/AppMvc.Net/wwwroot/",
+      "BasePath": "_content/AppMvc.Net",
+      "RelativePath": "planet/Earth.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/planet/Earth.jpg"
+    },
+    {
       "Identity": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Jupiter.jpg",
       "SourceId": "AppMvc.Net",
       "SourceType": "Discovered",
@@ -1154,23 +1171,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/planet/Saturn.jpg"
-    },
-    {
-      "Identity": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/The_Blue_Marble.jpg",
-      "SourceId": "AppMvc.Net",
-      "SourceType": "Discovered",
-      "ContentRoot": "/home/tien/Desktop/AppMvc.Net/wwwroot/",
-      "BasePath": "_content/AppMvc.Net",
-      "RelativePath": "planet/The_Blue_Marble.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/planet/The_Blue_Marble.jpg"
     },
     {
       "Identity": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Uranus.jpg",
