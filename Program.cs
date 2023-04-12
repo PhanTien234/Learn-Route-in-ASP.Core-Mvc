@@ -49,19 +49,27 @@ app.UseStatusCodePages(appError =>{
                 <title>Loi {code} </title>
             </head>
             <body>
-                <p>
+                <p style = 'color: red; font-size: 30px'>
                     Co loi cay ra: {code} - { (HttpStatusCode)code}
                 </p>
 
             </body>
         </html>";
         await response.WriteAsync(content);
-    });
+    }); //400-500
 }); // EndpointRoutingMiddleware
 
 app.UseRouting();
 
 app.UseAuthorization();
+app.UseEndpoints(async endpoints =>{
+    //endoint sayhi
+    endpoints.MapGet("/sayhi", async (context) =>{
+        await context.Response.WriteAsync($"Hello ASP.NET MVC {DateTime.Now}");
+    });
+
+    // endpoints.MapRazorPages();
+});
 
 //URL: /{controller}/{action}/{id?}
 //Abc/Xyz => Controller =Abc, goi method Xyz
