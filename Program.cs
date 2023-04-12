@@ -97,7 +97,7 @@ app.MapControllerRoute(
         action = "ViewProduct"
     },
     constraints: new {
-        url = "xemsanpham",
+        url = new RegexRouteConstraint(@"^((xemsanpham)(viewproduct))$"),
         id = new RangeRouteConstraint(2,4)
     }
 
@@ -105,7 +105,8 @@ app.MapControllerRoute(
     
 );
 // IRouteConstraint
-
+// RegexRouteConstraint: xemsanpham hoac viewproduct
+// url = "xemsanpham" // ~ new StringRouteConstraint("xemsanpha,)
 
 app.MapControllerRoute(
     name:"default",
