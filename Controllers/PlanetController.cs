@@ -18,6 +18,7 @@ namespace App.Controllers
             _logger = logger;
         }
 
+        [Route("Danh sach cac hanh tinh.html")]
         public IActionResult Index()
         {
             return View();
