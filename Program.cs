@@ -2,6 +2,7 @@ using System;
 using System.Net;
 using App.Services;
 using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Routing.Constraints;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -94,9 +95,17 @@ app.MapControllerRoute(
     defaults: new{
         controller = "First",
         action = "ViewProduct"
+    },
+    constraints: new {
+        url = new StringRouteConstraint("xemsanpham")
+        // id = ??
     }
+
+
     
 );
+// IRouteConstraint
+
 
 app.MapControllerRoute(
     name:"default",
