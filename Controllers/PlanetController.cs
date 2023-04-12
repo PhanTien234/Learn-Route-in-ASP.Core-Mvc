@@ -62,8 +62,9 @@ namespace App.Controllers
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
             return View("Detail", planet);
         }
-
-        [Route("sao/[action]")] // sao/Neptune
+        //[Route("sao/[action]")]              // sao/Neptune
+        // [Route("sao/[controller]/[action]")]  //sao/Planet/Neptune
+        [Route("[controller]-[action].html")] //Planet-Neptune.html
         public IActionResult Neptune()
         {
             var planet =_planetService.Where(x => x.Name == Name).FirstOrDefault();
