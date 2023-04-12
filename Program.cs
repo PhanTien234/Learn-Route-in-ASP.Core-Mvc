@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using App.Services;
 using Microsoft.AspNetCore.Mvc.Razor;
@@ -79,6 +80,26 @@ app.UseEndpoints(async endpoints =>{
 //     name: "default",
 //     pattern: "{controller=Home}/{action=Index}/{id?}");
 
+//URL = start-here
+//controller =>
+//action =>
+//area =>
+app.MapControllerRoute(
+    name:"firstroute",
+    pattern:"start-here",
+    defaults: new{
+        controller = "First",
+        action = "ViewProduct",
+        id = 3
+    }
+
+);
+
 app.MapRazorPages();
+
+// app.MapControllerRoute
+// app.MapController()
+// app.MapDefaultControllerRoute
+// app.MapAreaControllerRoute
 
 app.Run();
