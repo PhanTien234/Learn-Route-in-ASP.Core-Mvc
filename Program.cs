@@ -97,8 +97,8 @@ app.MapControllerRoute(
         action = "ViewProduct"
     },
     constraints: new {
-        url = new StringRouteConstraint("xemsanpham")
-        // id = ??
+        url = "xemsanpham",
+        id = new RangeRouteConstraint(2,4)
     }
 
 
