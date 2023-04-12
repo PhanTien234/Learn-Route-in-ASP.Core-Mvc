@@ -80,18 +80,27 @@ app.UseEndpoints(async endpoints =>{
 //     name: "default",
 //     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-//URL = start-here
+//URL = start-here/TenController/Action/id
+// start-here/First/HelloView
+// start-here/Home/Privacy
 //controller =>
 //action =>
 //area =>
+
+//xemsanpham/1
 app.MapControllerRoute(
-    name:"firstroute",
-    pattern:"start-here",
+    name:"first",
+    pattern:"{url}/{id?}",//start-here, start-hear/1, start-hear/123
     defaults: new{
         controller = "First",
-        action = "ViewProduct",
-        id = 3
+        action = "ViewProduct"
     }
+    
+);
+
+app.MapControllerRoute(
+    name:"default",
+    pattern:"start-here/{controller=Home}/{action=Index}/{id?}"//start-here, start-hear/1, start-hear/123
 
 );
 
