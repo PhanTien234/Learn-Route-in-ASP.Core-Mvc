@@ -1,3 +1,4 @@
+using System.Net;
 using App.Services;
 using Microsoft.AspNetCore.Mvc.Razor;
 
@@ -36,7 +37,27 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseStatusCodePages(); // EndpointRoutingMiddle ware
+app.UseStatusCodePages(appError =>{
+    appError.Run(async context => {
+        var response = context.Response;
+        var code = response.StatusCode;
+
+        
+        var content = @$"<html>
+            <head>
+                <meta charset='UTF-8'/>
+                <title>Loi {code} </title>
+            </head>
+            <body>
+                <p>
+                    Co loi cay ra: {code} - { (HttpStatusCode)code}
+                </p>
+
+            </body>
+        </html>";
+        await response.WriteAsync(content);
+    });
+}); // EndpointRoutingMiddleware
 
 app.UseRouting();
 
@@ -46,9 +67,9 @@ app.UseAuthorization();
 //Abc/Xyz => Controller =Abc, goi method Xyz
 //Home/Index
 //First/Index
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+// app.MapControllerRoute(
+//     name: "default",
+//     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
 
