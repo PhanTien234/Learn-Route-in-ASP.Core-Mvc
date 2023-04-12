@@ -91,15 +91,15 @@ app.UseEndpoints(async endpoints =>{
 //xemsanpham/1
 app.MapControllerRoute(
     name:"first",
-    pattern:"{url}/{id?}",//start-here, start-hear/1, start-hear/123
+    pattern:"{url:regex(^((xemsanpham)|(viewproduct))$)}/{id:range(2,4)}",//start-here, start-hear/1, start-hear/123
     defaults: new{
         controller = "First",
         action = "ViewProduct"
-    },
-    constraints: new {
-        url = new RegexRouteConstraint(@"^((xemsanpham)(viewproduct))$"),
-        id = new RangeRouteConstraint(2,4)
     }
+    // constraints: new {
+    //     //url = new RegexRouteConstraint(@"^((xemsanpham)|(viewproduct))$"),
+    //     //id = new RangeRouteConstraint(2,4)
+    // }
 
 
     
