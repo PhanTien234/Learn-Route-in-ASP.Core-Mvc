@@ -245,6 +245,38 @@
       "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
     },
     {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Jupiter.jpg",
+      "PackagePath": "staticwebassets/planet/Jupiter.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Mars.jpg",
+      "PackagePath": "staticwebassets/planet/Mars.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Mercury.jpg",
+      "PackagePath": "staticwebassets/planet/Mercury.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Neptune.jpg",
+      "PackagePath": "staticwebassets/planet/Neptune.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Saturn.jpg",
+      "PackagePath": "staticwebassets/planet/Saturn.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/The_Blue_Marble.jpg",
+      "PackagePath": "staticwebassets/planet/The_Blue_Marble.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Uranus.jpg",
+      "PackagePath": "staticwebassets/planet/Uranus.jpg"
+    },
+    {
+      "Id": "/home/tien/Desktop/AppMvc.Net/wwwroot/planet/Venus.jpg",
+      "PackagePath": "staticwebassets/planet/Venus.jpg"
+    },
+    {
       "Id": "obj/Debug/net7.0/staticwebassets/msbuild.AppMvc.Net.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

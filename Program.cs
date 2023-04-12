@@ -24,7 +24,7 @@ builder.Services.Configure<RazorViewEngineOptions>(options => {
 // builder.Services.AddSingleton(typeof(ProductService));
 
 builder.Services.AddSingleton(typeof(ProductService), typeof(ProductService));
-
+builder.Services.AddSingleton<PlanetService>();
 // builder.Services.AddTransient(typeof(ILogger<>), typeof(Logger<>)); Serilog
 var app = builder.Build();
 
@@ -39,39 +39,50 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
-app.UseStatusCodePages(appError =>{
-    appError.Run(async context => {
-        var response = context.Response;
-        var code = response.StatusCode;
+// app.UseStatusCodePages(appError =>{
+//     appError.Run(async context => {
+//         var response = context.Response;
+//         var code = response.StatusCode;
 
         
-        var content = @$"<html>
-            <head>
-                <meta charset='UTF-8'/>
-                <title>Loi {code} </title>
-            </head>
-            <body>
-                <p style = 'color: red; font-size: 30px'>
-                    Co loi cay ra: {code} - { (HttpStatusCode)code}
-                </p>
+//         var content = @$"<html>
+//             <head>
+//                 <meta charset='UTF-8'/>
+//                 <title>Loi {code} </title>
+//             </head>
+//             <body>
+//                 <p style = 'color: red; font-size: 30px'>
+//                     Co loi cay ra: {code} - { (HttpStatusCode)code}
+//                 </p>
 
-            </body>
-        </html>";
-        await response.WriteAsync(content);
-    }); //400-500
-}); // EndpointRoutingMiddleware
+//             </body>
+//         </html>";
+//         await response.WriteAsync(content);
+//     }); //400-500
+// }); // EndpointRoutingMiddleware
 
 app.UseRouting();
 
 app.UseAuthorization();
-app.UseEndpoints(async endpoints =>{
-    //endoint sayhi
-    endpoints.MapGet("/sayhi", async (context) =>{
-        await context.Response.WriteAsync($"Hello ASP.NET MVC {DateTime.Now}");
-    });
+// app.UseEndpoints(async endpoints =>{
+//     //endoint sayhi
+//     endpoints.MapGet("/sayhi", async (context) =>{
+//         await context.Response.WriteAsync($"Hello ASP.NET MVC {DateTime.Now}");
+//     });
 
-    // endpoints.MapRazorPages();
-});
+//     // endpoints.MapRazorPages();
+// });
+
+// [AcceptVerbs]
+// [Route]
+// [HttpGet]
+// [HttpPost]
+// [HttpPut]
+// [HttpDelete]
+// [HttpHead]
+// [HttpPatch]
+
+
 
 //URL: /{controller}/{action}/{id?}
 //Abc/Xyz => Controller =Abc, goi method Xyz
@@ -88,14 +99,16 @@ app.UseEndpoints(async endpoints =>{
 //action =>
 //area =>
 
-//xemsanpham/1
-app.MapControllerRoute(
-    name:"first",
-    pattern:"{url:regex(^((xemsanpham)|(viewproduct))$)}/{id:range(2,4)}",//start-here, start-hear/1, start-hear/123
-    defaults: new{
-        controller = "First",
-        action = "ViewProduct"
-    }
+// app.MapControllers();
+
+// //xemsanpham/1
+// app.MapControllerRoute(
+//     name:"first",
+//     pattern:"{url:regex(^((xemsanpham)|(viewproduct))$)}/{id:range(2,4)}",//start-here, start-hear/1, start-hear/123
+//     defaults: new{
+//         controller = "First",
+//         action = "ViewProduct"
+//     }
     // constraints: new {
     //     //url = new RegexRouteConstraint(@"^((xemsanpham)|(viewproduct))$"),
     //     //id = new RangeRouteConstraint(2,4)
@@ -103,16 +116,20 @@ app.MapControllerRoute(
 
 
     
-);
+// );
 // IRouteConstraint
 // RegexRouteConstraint: xemsanpham hoac viewproduct
 // url = "xemsanpham" // ~ new StringRouteConstraint("xemsanpha,)
 
-app.MapControllerRoute(
-    name:"default",
-    pattern:"start-here/{controller=Home}/{action=Index}/{id?}"//start-here, start-hear/1, start-hear/123
+// app.MapControllerRoute(
+//     name:"default",
+//     pattern:"start-here/{controller=Home}/{action=Index}/{id?}"//start-here, start-hear/1, start-hear/123
 
-);
+// );
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.MapRazorPages();
 
