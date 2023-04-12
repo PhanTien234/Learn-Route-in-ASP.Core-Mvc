@@ -141,9 +141,12 @@ namespace App.Controllers
             //Trường hopej thứ hai để truyền dữ liệu từ Controller qua View ta sử dụng:
             //ViewData
             // this.ViewData["key"] = "value";
-            this.ViewData["product"] = product;
-            ViewData["Title"] = product.Name;
-            return View("ViewProduct2");
+            // this.ViewData["product"] = product;
+            // ViewData["Title"] = product.Name;
+            // return View("ViewProduct2");
+
+            ViewBag.product = product;
+            return View("ViewProduct3");
         }
 
 
